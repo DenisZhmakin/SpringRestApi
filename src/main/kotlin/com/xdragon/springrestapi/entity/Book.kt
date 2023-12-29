@@ -1,3 +1,14 @@
 package com.xdragon.springrestapi.entity
 
-data class Book()
+import jakarta.persistence.*
+
+@Entity
+data class Book(
+    @Id
+    @GeneratedValue
+    val id: Long,
+    @Column(nullable = false)
+    val name: String,
+    @Column(nullable = false)
+    val author: String
+)
